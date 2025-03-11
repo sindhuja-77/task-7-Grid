@@ -1,0 +1,78 @@
+/*
+TASK INSTRUCTIONS:
+
+1. Apply a global reset:
+   - Remove default margin and padding from all elements.
+   - Set `box-sizing` to `border-box` for consistent sizing.
+
+2. Set up the `body`:
+   - Use a **font-family** of Arial, sans-serif.
+   - Apply a **background color** of light gray.
+
+3. Define the `.grid-container`:
+   - Use `display: grid;` to create a grid-based layout.
+   - Set **two fixed-width columns** (100px and 200px).
+   - Set **three fixed-height rows** (50px, 200px, and 50px).
+   - Add a **gap of 10px** between grid items.
+   - Give it a light gray background and padding.
+
+4. Style the `.item` elements:
+   - Use `display: flex;` to center content within each grid item.
+   - Set a **background color** of blue.
+   - Set **white text color**, bold font, and rounded corners.
+
+5. Apply specific grid placements:
+   - `.item1` (Header) should **span across both columns**.
+   - `.item2` (Sidebar) should **span across two rows**.
+   - `.item3` (Main Content) should **span across two rows** and have a different background color (green).
+   - `.item4` (Footer) should **span across both columns** and have extra padding.
+
+6. **Check the effect of the commented-out `grid-row: span 2;` in `.item4`.**
+   - Uncomment and observe how it changes the layout.
+*/
+/* Start writting your css code */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body, html {
+   font-family: Arial,sans-serif;
+   background-color: lightgray;
+}
+.grid-container {
+   display: grid;
+   grid-template-columns: 100px 200px;
+   grid-template-rows: 50px 200px 50px;
+   gap:10px;
+   background-color: lightgray;
+   padding: 10px;
+}
+.item {
+   display:flex;
+   background-color: blue;
+   align-items: center;
+   justify-content: center;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   font-size: 22px;
+}
+
+.item1{
+   grid-column: span 2;
+   background-color: blue;
+}
+.item2{
+   grid-row: span 2;
+   background-color: blue;
+}
+.item3{
+   grid-row: span 2;
+   background-color:green;
+}
+.item4{
+   grid-column: span 2;
+   background-color: blue;
+   padding:20px;
+}
